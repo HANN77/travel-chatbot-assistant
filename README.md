@@ -90,6 +90,32 @@ Server is running on http://localhost:3000
 4. Click **Start / Reset Chat** to initialize your session parameters.
 5. Ask your first question in the main window!
 
+### Step 5: Testing the API directly via Postman 📬
+
+If you are a developer and want to bypass the UI to test the API directly using Postman:
+
+1. Open Postman and create a new **POST** request.
+2. Enter the URL: `http://localhost:3000/chat`
+3. Go to the **Body** tab, select **raw**, and choose **JSON** from the dropdown.
+4. Enter the following JSON payload:
+
+```json
+{
+  "message": "What is the best way to get around Tokyo?",
+  "sessionId": "postman-test-123",
+  "tone": "Casual",
+  "topic": "Public Transportation"
+}
+```
+
+5. Hit **Send**! You will receive a structured Markdown response from the AI Travel Assistant back in JSON format:
+
+```json
+{
+  "answer": "The best way to get around Tokyo is definitely by train! The subway system is vast..."
+}
+```
+
 ---
 
 ## 📂 Project Structure
